@@ -1,0 +1,53 @@
+.documents-sidebar {
+  width: 200px;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1035;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.documents-sidebar .sidebar-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.documents-sidebar h4 {
+  padding-top: 1rem; /* adjust as needed */
+  padding-left: 1rem;
+  color: #ffffff !important;
+}
+
+.documents-main {
+  margin-top: 80px; /* Adjust to ensure it clears the navbar */
+  padding: 1rem; /* Increased padding for better spacing */
+  z-index: 1050; /* Ensure it is above the navbar */
+  position: relative; /* Ensure proper stacking context */
+}
+
+.documents-main .row {
+  position: relative;
+  z-index: 1020;
+}
+
+.documents-main input[type="text"],
+.documents-main select {
+  border: 2px solid #1a88f7 !important; 
+  border-radius: 5px; /* Optional: rounded corners */
+  padding: 0.5rem; /* Adjust padding for better appearance */
+}
+
+.documents-main input[type="text"]:focus,
+.documents-main select:focus {
+  outline: none;
+  border-color: #1a88f7 !important; 
+}

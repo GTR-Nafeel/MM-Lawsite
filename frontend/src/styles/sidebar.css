@@ -1,0 +1,121 @@
+.sidebar {
+  width: 220px;
+  background: rgba(20, 20, 30, 0.92);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  min-height: 100vh;
+  box-shadow: 2px 0 16px 0 rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 16px;
+  cursor: pointer;
+  outline: none;
+  align-self: flex-end;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-toggle:hover {
+  transform: scale(1.1);
+}
+
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  gap: 6px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.05rem;
+  border-left: 4px solid transparent;
+  transition: background 0.15s, border-color 0.15s, padding 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebar.collapsed .sidebar-link {
+  justify-content: center;
+  padding: 14px 10px;
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-link.active {
+  background: rgba(0, 120, 255, 0.18);
+  border-left: 4px solid #1976d2;
+  color: #fff;
+}
+
+.sidebar-link svg {
+  margin-right: 10px;
+  flex-shrink: 0;
+  font-size: 1.25rem;
+}
+
+.sidebar.collapsed .sidebar-link svg {
+  margin: 0;
+}
+
+.sidebar.collapsed .sidebar-link span {
+  display: none;
+}
+
+.sidebar-logout {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 18px 24px;
+  cursor: pointer;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.15s;
+}
+
+.sidebar.collapsed .sidebar-logout {
+  justify-content: center;
+  padding: 18px 10px;
+}
+
+.sidebar-logout:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.sidebar-logout svg {
+  margin-right: 10px;
+  font-size: 1.25rem;
+}
+
+.sidebar.collapsed .sidebar-logout svg {
+  margin: 0;
+}
+
+.sidebar.collapsed .sidebar-logout-text {
+  display: none;
+}
+
+.sidebar-logout-text {
+  font-size: 1.05rem;
+}
